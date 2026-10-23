@@ -48,7 +48,7 @@ console.log(cocina2.mensaje);
 console.log(cocina2.electrodomesticos.nevera);
 console.log(cocina2.electrodomesticos.licuadora);
 console.log(cocina2.electrodomesticos.microondas);
-console.log(Object.keys(cocina2.electrodomesticos).length); // Imprime la cantidad de electrodomésticos (Object.keys() devuelve un array con las propiedades de un objeto, y .length devuelve la cantidad de elementos en ese array)
+console.log(Object.keys(cocina2.electrodomesticos)); // Imprime la cantidad de electrodomésticos (Object.keys() es la propiedad de los objects)
 console.log(cocina2.utensilios[0]);
 console.log(cocina2.utensilios[1]);
 console.log(cocina2.utensilios[2]);
