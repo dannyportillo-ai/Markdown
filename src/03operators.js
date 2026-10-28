@@ -35,5 +35,5 @@ let numero = 3;
 numero ++;
 numero --;
 
-
 console.log(numero);
+
