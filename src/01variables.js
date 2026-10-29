@@ -60,7 +60,7 @@
 
 // Que es un .split() en un string
 
-// let nombre = "Danny Portillo";
+let nombre = "Danny Portillo";
 // let resultado = nombre;
 // console.log(resultado); 
 
@@ -75,7 +75,7 @@
 // console.log(resultado3);
 
 // let palabra = "hola";
-// let resultado4 = palabra.split("");
+// let resultado4 = palabra.split(" ");
 // console.log(resultado4);
 
 // // Que es un .join() en un array
@@ -84,8 +84,25 @@
 // let resultado5 = frase2;
 // console.log(resultado5);
 
-// // .join(): convierte un array en un string, uniendo sus elementos.
+// .join(): convierte un array en un string, uniendo sus elementos.
 
 // let frase = ["Me", "Gusta", "JavaScript"];
 // let resultado6 = frase.join(" ");
 // console.log(resultado6);
+
+
+//template literals
+// `la suma de 2 enteros ${2 + 3 } y la multiplicacion ${2*2}`
+
+//toUpperCase
+let mayusculas = nombre.toLocaleUpperCase();
+console.log(mayusculas);
+
+//startWith -endWith
+let nombre7 = "Aleajandro";
+console.log(nombre7.startsWith("A"));
+console.log(nombre7.endsWith("D"));
+
+//trim
+let nombre99 = "   Danny   "
+console.log(nombre99.trim());
