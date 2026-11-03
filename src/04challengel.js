@@ -1,106 +1,151 @@
-//Inicio las variables
-let nombre = "   Danny Portillo   ";
-let edad = 18;
-let lenguaje = "JavaScript";
-let nivel = "principiante";
-let horasEstudio = 12;
-let activo = true;
+// Datos de la empresa
 
-//Analizador de nombre
-let nombreLimpio = nombre.trim();
-let nombreMayuscula = nombreLimpio.toLocaleUpperCase();
-let nombreMinuscula = nombreLimpio.toLowerCase();
+let empresa = "  Tech Store  ";
+let propietario = "Danny";
+let ciudad = "Bogota";
+let activa = true;
 
-//dividir unir e invertir
-let partesNombre = nombreLimpio.split(" ");
-let nombreInvertido = partesNombre.reverse().join(" ")
+// Estos son los productos que se venden
 
-//con que inicia con que termina 
-let empiezaCon = lenguaje.startsWith("Phython");
-let terminaCon = lenguaje.endsWith("Script");
-let cantidadLetras = lenguaje.length;
+let productos = ["Teclado", "Mouse", "Audifonos", "Monitor"];
+let codigos = ["TEC-001", "MOU-002", "AUD-003", "MON-004"];
+let precios = [80000, 45000, 120000, 650000];
+let cantidades = [10, 15, 5, 4];
 
-//operaciones
-let edadFutura = edad + 5;
-let horaSemanales = horasEstudio *7;
-let estudiaMucho = horasEstudio >=10;
 
-let perfil= `
-==== PERFIL DE USUARIO ====
-Nombre: ${nombreMayuscula}
-Nombre Invertido: ${nombreInvertido}
-Lenguaje: ${lenguaje}
-Edad Futua : ${edadFutura}
-Horas semanales: ${horaSemanales}
-¿Empieza con java?: ${empiezaCon}
-¿Termina con Script?: ${terminaCon}
-Usuario activo: ${activo}
-`;
+// Estas son las ventas
 
-console.log(perfil);
+let unidadesVendidas = [3, 5, 2, 1];
 
-// Registro de videojuegos
+// Organizacion de la informacion
 
-// Variables
-let jugador = "  Danny  ";
-let juegoFavorito = "  GTA V  ";
-let edad2 = 18;
+let nombreEmpresa = empresa.trim().toUpperCase();
+let listaProductos = productos.join(" | ");
+let categorias = "Perifericos - Accesorios - Monitores";
+let listaCategorias = categorias.split(" - ");
+let categoriasOrganizadas = listaCategorias.join(", ");
+let codigoAnalizado = codigos[0].trim();
+let codigoValido = codigoAnalizado.startsWith("TEC");
+let codigoTermina = codigoAnalizado.endsWith("001");
 
-// Videojuegos
-let juegos = ["GTA V", "Minecraft", "FIFA 25"];
-let horas = [20, 15, 10];
-let puntuaciones = [9, 8, 7];
+// Esta es la cantidad de productos que hay
 
-// Generos
-let generos = "Accion - Aventura - Deportes";
+let valorTeclados = precios[0] * cantidades[0];
+let valorMouse = precios[1] * cantidades[1];
+let valorAudifonos = precios[2] * cantidades[2];
+let valorMonitores = precios[3] * cantidades[3];
 
-// Limpiar informacion
-let nombreJugador = jugador.trim();
-let favorito = juegoFavorito.trim();
-let jugadorMayuscula = nombreJugador.toUpperCase();
-let listaJuegos = juegos.join(" | ");
-let listaGeneros = generos.split(" - ");
-let generosUnidos = listaGeneros.join(", ");
+let valorInventario =
+    valorTeclados +
+    valorMouse +
+    valorAudifonos +
+    valorMonitores;
 
-// Operaciones
-let totalHoras = horas[0] + horas[1] + horas[2];
-let promedio = (
+// Calular las ventas de cada producto 
 
-    puntuaciones[0] +
+let ventaTeclados = precios[0] * unidadesVendidas[0];
+let ventaMouse = precios[1] * unidadesVendidas[1];
+let ventaAudifonos = precios[2] * unidadesVendidas[2];
+let ventaMonitores = precios[3] * unidadesVendidas[3];
 
-    puntuaciones[1] +
+let totalVentas =
+    ventaTeclados +
+    ventaMouse +
+    ventaAudifonos +
+    ventaMonitores;
 
-    puntuaciones[2]
+// Cuantos productos quedan
 
-) / 3;
+let cantidadTeclados = cantidades[0] - unidadesVendidas[0];
+let cantidadMouse = cantidades[1] - unidadesVendidas[1];
+let cantidadAudifonos = cantidades[2] - unidadesVendidas[2];
+let cantidadMonitores = cantidades[3] - unidadesVendidas[3];
 
-// Analizar juego favorito
+let cantidadTotal =
+    cantidadTeclados +
+    cantidadMouse +
+    cantidadAudifonos +
+    cantidadMonitores;
 
-let empiezaCon1 = favorito.startsWith("GTA");
 
-let terminaCon2 = favorito.endsWith("V");
+// Analisis de la información
 
-// Reporte
+let productosRegistrados = productos.length;
+
+let unidadesVendidasTotal =
+    unidadesVendidas[0] +
+    unidadesVendidas[1] +
+    unidadesVendidas[2] +
+    unidadesVendidas[3];
+
+let productosDisponibles = cantidadTotal > 0;
+let empresaActiva = activa === true;
+
+
+// Reporte final
 
 let reporte = `
 
-===== GAME STATS =====
 
-Jugador: ${jugadorMayuscula}
-Edad: ${edad}
-Mis videojuegos:
-${listaJuegos}
+BUSINESS MANAGER
+TECH STORE
+            
 
-Generos:
-${generosUnidos}
+INFORMACION DE LA EMPRESA
 
-Horas jugadas: ${totalHoras}
-Promedio de puntuacion: ${promedio.toFixed(2)}
-Juego favorito: ${favorito}
-Empieza con GTA: ${empiezaCon1}
-Termina con V: ${terminaCon2}
+Empresa: ${nombreEmpresa}
+Propietario: ${propietario}
+Ciudad: ${ciudad}
+Empresa activa: ${empresaActiva}
 
-===== FIN DEL REPORTE =====
+
+CATALOGO DE PRODUCTOS
+
+${listaProductos}
+
+Productos registrados: ${productosRegistrados}
+
+Categorias: ${categoriasOrganizadas}
+
+
+CONTROL DE INVENTARIO
+
+Teclados: ${cantidadTeclados} unidades
+Mouse: ${cantidadMouse} unidades
+Audifonos: ${cantidadAudifonos} unidades
+Monitores: ${cantidadMonitores} unidades
+
+Valor del inventario inicial: $${valorInventario}
+
+Productos actuales: ${cantidadTotal} unidades
+
+
+REPORTE DE VENTAS
+
+Teclados: $${ventaTeclados}
+Mouse: $${ventaMouse}
+Audifonos: $${ventaAudifonos}
+Monitores: $${ventaMonitores}
+
+Unidades vendidas: ${unidadesVendidasTotal}
+
+INGRESOS TOTALES: $${totalVentas}
+
+
+ANALISIS DE CODIGOS
+
+Codigo analizado: ${codigoAnalizado}
+Empieza con TEC: ${codigoValido}
+Termina en 001: ${codigoTermina}
+
+
+ESTADO DEL NEGOCIO
+
+Productos disponibles: ${productosDisponibles}
+Empresa activa: ${empresaActiva}
+
+
+FIN DEL REPORTE
 
 `;
 
