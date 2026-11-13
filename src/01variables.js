@@ -1,108 +1,195 @@
-// // var nombre1 = "Danny";
-// // let apellido = "Portillo";
-// // const apellido2 = "Valderrama";
+// METODOS DE STRING (TEXTO)
 
-// // console.log(nombre1);
-
-// //array 10 elements
-
-// let cocina = ["nevera", "estufa", "licuadora", "microondas", "sarten", "olla", "cuchillo", "plato", "vaso", "taza"];
-
-// console.log(cocina[0]);
-
-// // Modificar un elemento
-
-// // Agregar al inicio
-// cocina.unshift("Tostadora");
-
-// // Agregar al final
-// cocina.push("Colador");
-
-// console.log(cocina);
-
-// // Eliminar el primero
-// cocina.shift();
-
-// // Eliminar el último
-// cocina.pop();
-
-// //permite eliminar un elemento de una posición específica
-// cocina.splice(2, 1); // Aquí, 2 es la posición y 1 es la cantidad de elementos que quieres eliminar.
-
-// console.log(cocina);
-
-// //mensaje con objeos y dentro de los objetos hay objetos y arrays
-
-// let cocina2 = {
-//     nombre: "Mi cocina",
-//     mensaje: "Bienvenidos a mi cocina",
-
-//     electrodomesticos: {nevera: "Samsung", licuadora: "Oster", microondas: "LG"},
-
-//     utensilios: ["Cuchillo", "Sartén", "Olla", "cuchara", "plato"]
-// };
-
-// // Imprimir mensajes y objetos
-// console.log(cocina2.nombre);
-// console.log(cocina2.mensaje);
-// console.log(cocina2.electrodomesticos.nevera);
-// console.log(cocina2.electrodomesticos.licuadora);
-// console.log(cocina2.electrodomesticos.microondas);
-// console.log(Object.keys(cocina2.electrodomesticos)); // Imprime la cantidad de electrodomésticos (Object.keys() es la propiedad de los objects)
-// console.log(cocina2.utensilios[0]);
-// console.log(cocina2.utensilios[1]);
-// console.log(cocina2.utensilios[2]);
-// console.log(cocina2.utensilios[3]);
-// console.log(cocina2.utensilios[4]);
-// console.log(cocina2.utensilios.length); // Imprime la cantidad de utensilios (.length es una propiedad de los arrays que devuelve el número de elementos que contiene)
+// .toUpperCase() - Mayusculas
+// let texto = "danny";
+// console.log(nombre.toUpperCase()); 
+// Resultado: "DANNY"
 
 
-
-// Que es un .split() en un string
-
-let nombre = "Danny Portillo";
-// let resultado = nombre;
-// console.log(resultado); 
-
-// // .split(): convierte un string en un array, separando el texto.
-
-// let nombre2 = "Danny Portillo";
-// let resultado2 = nombre2.split(" ");
-// console.log(resultado2);
-
-// let frutas = "manzana, pera, uva";
-// let resultado3 = frutas.split(",");
-// console.log(resultado3);
-
-// let palabra = "hola";
-// let resultado4 = palabra.split(" ");
-// console.log(resultado4);
-
-// // Que es un .join() en un array
-
-// let frase2 = ["Me", "Gusta", "JavaScript"];
-// let resultado5 = frase2;
-// console.log(resultado5);
-
-// .join(): convierte un array en un string, uniendo sus elementos.
-
-// let frase = ["Me", "Gusta", "JavaScript"];
-// let resultado6 = frase.join(" ");
-// console.log(resultado6);
+// .toLoweCase() - Minusculas
+// let nombre = "DANNY";
+// console.log(nombre.toLowerCase()); 
+// Resultado: "danny"
 
 
-//template literals
-// `la suma de 2 enteros ${2 + 3 } y la multiplicacion ${2*2}`
+// .startsWith() - Con que empieza un texto
+// let nombre = "Danny";
+// console.log(nombre.startsWith("Dan")); 
+// Resulatdo: true
 
-//toUpperCase
-let mayusculas = nombre.toLocaleUpperCase();
-console.log(mayusculas);
 
-//startWith -endWith
-let nombre7 = "Aleajandro";
-console.log(nombre7.startsWith("A"));
-console.log(nombre7.endsWith("D"));
+// .endWith() - Con que termina un texto
+// let nombre = "Danny";
+// console.log(nombre.endWith("nn")); 
+// Resultado: false
 
-//trim
-let nombre99 = "   Danny   "
-console.log(nombre99.trim());
+
+// .split() - Convierte un string en un array, separando el texto.
+// let nombre = "Danny Portillo";
+// console.log(nombre.split(" "));
+// Resultado: ["Danny, Portillo"]
+
+
+// .trim() - Elimina los espacios innecesarios al principio y al final de un texto
+// let nombre = "   Danny   ";
+// console.log(nombre.trim());
+// Resultado: Danny
+
+
+// .includes() - Comprueba si un texto contiene una palabra o letras específicas.
+// let nombre = "Danny Portillo";
+// console.log(nombre.includes("Danny"));
+// Resultado: true
+
+
+// .splice() - Sirve para agregar, eliminar o reemplazar elementos de un array.
+
+// 1. Eliminar elementos
+// let frutas = ["Manzana", "Pera", "Uva"];
+// frutas.splice(1, 1);
+// console.log(frutas);
+// Resultado: ["Manzana", "Uva"]
+
+// 2. Agregar elementos
+// let frutas = ["Manzana", "Uva"];
+// frutas.splice(1, 0, "Pera");
+// console.log(frutas);
+// Resultado: ["Manzana", "Pera", "Uva"]
+
+// 3. Reemplazar elementos
+// let frutas = ["Manzana", "Pera", "Uva"];
+// frutas.splice(1, 1, "Mango");
+// console.log(frutas);
+// Resultado: ["Manzana", "Mango", "Uva"]
+
+// Primer número 1: posición donde empieza.
+// Segundo número 1: cantidad de elementos que elimina.
+
+
+// .replaceAll() - Sirve para reemplazar todas las coincidencias de un texto por otro.
+// let frase = "Me gusta JavaScript y JavaScript es genial";
+// console.log(frase.replaceAll("JavaScript", "HTML"));
+// Resultado: Me gusta HTML y HTML es genial
+
+
+
+// METODOS DE ARRAY (ARREGLOS)
+
+// .join() - Convierte un array en un string, uniendo sus elementos.
+// let nombre = ["Danny, Portillo"];
+// console.log(nombre.join(" ")); 
+// Resultado: "Danny Portillo"
+
+
+// .push() - Agrega un elemento al final del array
+// let frutas = ["Manzana, "Pera]; 
+// frutas.push("Uva");
+// console.log(frutas);
+// Resultado: ["Manzana", "Pera", "Uva"]
+
+
+// .unshift() - Agregar un elemento al principio del array 
+// let frutas = ["Manzana, "Pera]; 
+// frutas.unshift("Uva");
+// console.log(frutas); 
+// Resultado: ["Uva","Manzana", "Pera"]
+
+
+// .pop() - Elimina el ultimo elemento del array
+// let frutas = ["Manzana, "Pera, "Uva"]; 
+// frutas.pop("Uva");
+// console.log(frutas); 
+// Resultado: ["Manzana", "Pera"]
+
+
+// .shift() - Elimina el primer elemento del arrya
+// let frutas = ["Manzana, "Pera, "Uva"]; 
+// frutas.shift("Uva");
+// console.log(frutas); 
+// Resultado: ["Pera", "Uva"]
+
+
+// .splice() - Sirve para agregar, eliminar o reemplazar elementos de un array.
+
+// 1. Eliminar elementos
+// let frutas = ["Manzana", "Pera", "Uva"];
+// frutas.splice(1, 1);
+// console.log(frutas);
+// Resultado: ["Manzana", "Uva"]
+
+// 2. Agregar elementos
+// let frutas = ["Manzana", "Uva"];
+// frutas.splice(1, 0, "Pera");
+// console.log(frutas);
+// Resultado: ["Manzana", "Pera", "Uva"]
+
+// 3. Reemplazar elementos
+// let frutas = ["Manzana", "Pera", "Uva"];
+// frutas.splice(1, 1, "Mango");
+// console.log(frutas);
+// Resultado: ["Manzana", "Mango", "Uva"]
+
+// Primer número 1: posición donde empieza.
+// Segundo número 1: cantidad de elementos que elimina.
+
+
+
+// OTROS CONCEPTOS Insertar variables dentro de textos usando ${}.
+
+// template literals (plantillas literales) - Permiten unir textos y variables fácilmente utilizando las comillas invertidas (`) y ${}.
+// let nombre = "Danny";
+// let edad = 17;
+// console.log(`Hola, soy ${nombre} y tengo ${edad} años`);
+// Resultado: Hola, soy Danny y tengo 17 años
+
+
+
+// METODOS Y HERRAMIENTAS ADICIONALES
+
+// .getElementById() - Busca un elemento HTML mediante su identificador (id).
+
+// </> JavaScript
+// let titulo = document.getElementById("titulo");
+// console.log(titulo);
+
+// Si en HTML tienes:
+
+// </> HTML
+// <h1 id="titulo">Hola Danny</h1>
+// Resultado: JavaScript encuentra ese título.
+
+
+// .querySelector() - Busca un elemento HTML utilizando selectores CSS.
+
+// </> JavaScript 
+// let titulo = document.querySelector(".titulo");
+
+// Puedes buscar por:
+// "#titulo" → ID.
+// ".titulo" → Clase.
+// "h1" → Etiqueta.
+
+
+// .addEventListener() - Permite detectar cuando ocurre un evento, como un clic.
+
+// </> JavaScript 
+// let boton = document.getElementById("boton");
+// boton.addEventListener("click", function() {
+//     console.log("Hiciste clic");
+// });
+// Resultado: Cuando presionas el botón, aparece el mensaje.
+
+
+// .createElement() - Permite crear elementos HTML desde JavaScript.
+
+// </> JavaScript
+// let parrafo = document.createElement("p");
+// parrafo.textContent = "Hola Danny";
+// Resultado: Crea un párrafo, pero todavía no lo muestra en la página.
+
+
+// .appendChild() - Agrega un elemento dentro de otro.
+// </> JavaScript
+// document.body.appendChild(parrafo);
+// Ahora el párrafo aparece en la página.
+

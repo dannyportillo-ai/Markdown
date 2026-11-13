@@ -29,4 +29,3 @@ numero ++;
 numero --;
 
 console.log(numero);
-
